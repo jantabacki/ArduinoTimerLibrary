@@ -12,9 +12,10 @@ private:
   typedef void(*functionPointer)();
 public:
   functionPointer pointer;
-  long interval;
-  long lastEllapsed;
-  TimerFunction(functionPointer, long, long);
+  int interval;
+  unsigned long lastEllapsed;
+  bool shouldBeExecuted = false;
+  TimerFunction(functionPointer, int, unsigned long);
   TimerFunction();
 };
 

@@ -1,8 +1,5 @@
 #include<Timer.h>
 
-//Initialization of timer with place for two tasks
-Timer timer(2);
-
 //Function to send to SerialMonitor information about being called
 void function1() {
   Serial.println("Function - 1");
@@ -11,9 +8,11 @@ void function1() {
 void function2() {
   Serial.println("Function - 2");
   //Remove first function from calling schedule
-  timer.RemoveThread(&function1);
+  Timer::RemoveThread(&function1);
   //Add third function to calling schedule, this function will be called every 2000ms
-  timer.AddThread(&function3, 2000);
+  Timer::AddThread(&function3, 2000);
+  //Enable thread
+  Timer::EnableThread(&function3);
 }
 
 bool builtInLedState = false;
@@ -38,17 +37,21 @@ void function4() {
 }
 
 void setup() {
+  //Preparing space for two threads in Timer
+  Timer::CreateSpace(2);
   Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);
   //Add first and second function to calling schedule
   //Calling interval set to 100ms for function1 and to 1000ms for function2
-  timer.AddThread(&function1, 100);
-  timer.AddThread(&function2, 1000);
+  Timer::AddThread(&function1, 100);
+  Timer::AddThread(&function2, 800);
+  //Enable threads
+  Timer::EnableThread(&function1);
+  Timer::EnableThread(&function2);
 }
 
 void loop() {
-  //Timer will check if any of tasks in schedule should be called
-  timer.CheckThreads();
   //Function independent from calling by Timer
   function4();
+  delay(700);
 }

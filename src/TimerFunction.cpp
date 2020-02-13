@@ -6,7 +6,7 @@
 
 #include "TimerFunction.h"
 
-TimerFunction::TimerFunction(functionPointer function, long intervalValue, long ellapsed)
+TimerFunction::TimerFunction(functionPointer function, int intervalValue, unsigned long ellapsed)
 {
   pointer = function;
   interval = intervalValue;

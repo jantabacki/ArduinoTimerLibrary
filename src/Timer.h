@@ -12,17 +12,19 @@
 class Timer
 {
 private:
-  typedef void (*functionPointer)();
-  int threadsArrayIterator = 0;
-  int threadsArraySize = 0;
-  TimerFunction *threadsArray = new TimerFunction[1];
+	typedef void (*functionPointer)();
+  	static int threadsArrayIterator;
+	static int threadsArraySize;
+	static TimerFunction *threadsArray;
+	static bool wasMemoryAlocated;
+	static void EnableInterruptTimer();
 public:
-  Timer();
-  Timer(int);
-  void AddThread(void functionPointer(), long interval);
-  void RemoveThread(void functionPointer());
-  void StartThreads();
-  void CheckThreads();
+	static void AddThread(void functionPointer(), int interval);
+	static void RemoveThread(void functionPointer());
+	static void CheckThreads();
+	static void CreateSpace(int);
+	static void EnableThread(void functionPointer());
+	static void DisableThread(void functionPointer());
 };
 
 #endif

@@ -1,6 +1,7 @@
-Timer	KEYWORD1	Timer
+Timer			KEYWORD1	Timer
 
-AddThread	KEYWORD2
+AddThread		KEYWORD2
 RemoveThread	KEYWORD2
-StartThreads	KEYWORD2
-CheckThreads	KEYWORD2
+CreateSpace		KEYWORD2
+EnableThread	KEYWORD2
+DisableThread	KEYWORD2

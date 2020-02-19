@@ -1,6 +1,5 @@
-InterruptTimer KEYWORD1 InterruptTimer
-Timer KEYWORD1 Timer
-
+Timer KEYWORD1
+InterruptTimer KEYWORD1
 AddThread KEYWORD2
 RemoveThread KEYWORD2
 CreateSpace KEYWORD2

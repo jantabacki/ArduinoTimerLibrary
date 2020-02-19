@@ -1,7 +1,7 @@
-Timer KEYWORD1
-InterruptTimer KEYWORD1
-AddThread KEYWORD2
-RemoveThread KEYWORD2
-CreateSpace KEYWORD2
-EnableThread KEYWORD2
-DisableThread KEYWORD2
+Timer 	KEYWORD1
+InterruptTimer 	KEYWORD1
+AddThread 	KEYWORD2
+RemoveThread 	KEYWORD2
+CreateSpace 	KEYWORD2
+EnableThread 	KEYWORD2
+DisableThread 	KEYWORD2

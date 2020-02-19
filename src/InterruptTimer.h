@@ -3,8 +3,8 @@
   Created by Jan Tabacki, February 12, 2020.
   Released into the public domain.
 */
-#ifndef Timer_h
-#define Timer_h
+#ifndef InterruptTimer_h
+#define InterruptTimer_h
 
 #include "TimerFunction.h"
 #include "Arduino.h"

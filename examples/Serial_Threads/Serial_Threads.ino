@@ -1,4 +1,4 @@
-#include<Timer.h>
+#include<InterruptTimer.h>
 
 //Function to send to SerialMonitor information about being called
 void function1() {

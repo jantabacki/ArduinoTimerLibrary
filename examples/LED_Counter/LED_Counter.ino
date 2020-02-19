@@ -1,4 +1,4 @@
-#include<Timer.h>
+#include<InterruptTimer.h>
 
 /*
    (D2) (+)LED1(-) [Resistor] (GND)
